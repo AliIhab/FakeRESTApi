@@ -1,0 +1,1923 @@
+{
+	"id": "c92005cb-55e2-4381-a2b7-312600cdfa64",
+	"name": "Swagger",
+	"timestamp": "2024-09-16T12:41:49.013Z",
+	"collection_id": "38171998-81ceee82-dde8-42da-8bed-07331d458de9",
+	"folder_id": 0,
+	"environment_id": "38171998-b0797ebe-8dff-4b14-80e4-60efbe2e0942",
+	"totalPass": 42,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-09-16T12:41:32.494Z",
+	"totalFail": 18,
+	"results": [
+		{
+			"id": "bcef86bc-4248-45ee-a1e5-78322eb2539e",
+			"name": "Get all activities",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Activities",
+			"time": 896,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				896
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "519c0c23-5720-4019-9956-0ecfa51d804f",
+			"name": "Get all activities Query by date",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Activities?date=2024-09-15",
+			"time": 137,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body is correct": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body is correct": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				137
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body is correct": false
+				}
+			]
+		},
+		{
+			"id": "a131ebd3-69c4-40b5-8368-3e4e2f09a574",
+			"name": "Get activities by pagination",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Activities?sort=id,desc",
+			"time": 128,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				128
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a657fc77-433c-494a-8a6b-71c8120a59bf",
+			"name": "Post Activities",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Activities",
+			"time": 130,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				130
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "a9c8b1bd-39a2-49b2-a5e7-c6f81e201cd8",
+			"name": "Post Activities with invalid data",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Activities",
+			"time": 326,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				326
+			],
+			"allTests": [
+				{
+					"Status code is 400": false
+				}
+			]
+		},
+		{
+			"id": "27d35b5d-97bf-454a-b7a7-32c43684bf4f",
+			"name": "Post Activities but body is empty",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Activities",
+			"time": 140,
+			"responseCode": {
+				"code": 415,
+				"name": "Unsupported Media Type"
+			},
+			"tests": {
+				"Status code is 415": true
+			},
+			"testPassFailCounts": {
+				"Status code is 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				140
+			],
+			"allTests": [
+				{
+					"Status code is 415": true
+				}
+			]
+		},
+		{
+			"id": "d25f6f49-554d-4915-889a-6b66a4dc600a",
+			"name": "Post Activities but body is empty Copy",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Activities",
+			"time": 129,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				129
+			],
+			"allTests": [
+				{
+					"Status code is 400": false
+				}
+			]
+		},
+		{
+			"id": "b5befa00-064e-4d0c-9051-6da98937d806",
+			"name": "Get Activity from id",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Activities/2",
+			"time": 320,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				320
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "4caff4af-3e41-464e-b25c-caa127921105",
+			"name": "Get Activity from invalid id(characters))",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Activities/abc",
+			"time": 138,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				138
+			],
+			"allTests": [
+				{
+					"Status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "22142778-62c7-4cc2-aaae-ffdf4c0ee6fb",
+			"name": "Delete Activity using id",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Activities/0",
+			"time": 123,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				123
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "4514230f-f623-4ebb-86a3-1a5eb8a31de8",
+			"name": "Delete Activity using invalid id",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Activities/9999",
+			"time": 128,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 404": false
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				128
+			],
+			"allTests": [
+				{
+					"Status code is 404": false
+				}
+			]
+		},
+		{
+			"id": "61bd3568-c36c-4b1c-9927-34bf2a13f021",
+			"name": "Put Activity with id",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Activities/0",
+			"time": 113,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				113
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "e325db6a-2e3a-4461-a0eb-dd26163c5593",
+			"name": "Put Activity without data",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Activities/0",
+			"time": 120,
+			"responseCode": {
+				"code": 415,
+				"name": "Unsupported Media Type"
+			},
+			"tests": {
+				"Status code is 415": true
+			},
+			"testPassFailCounts": {
+				"Status code is 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				120
+			],
+			"allTests": [
+				{
+					"Status code is 415": true
+				}
+			]
+		},
+		{
+			"id": "9cfba833-c135-4b23-895c-b6a643f92556",
+			"name": "Get Authors info",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Authors",
+			"time": 197,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				197
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "880788f8-d226-49fe-a45f-d9bf098cf59a",
+			"name": "Get Authors info with invalid media",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Authors",
+			"time": 196,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				196
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "c9779626-80c5-466d-abb0-05ddcae51357",
+			"name": "Get Authors info by valid id",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Authors/1",
+			"time": 451,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				451
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "23e8758e-48fb-47f4-9774-a169a87b0366",
+			"name": "Get Authors info by Query Parameter",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Authors?lastname=Doe",
+			"time": 386,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				386
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "3b993ffb-4790-4ce6-90e3-b264192037cb",
+			"name": "Post Author info",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Authors",
+			"time": 145,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				145
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "b45da636-a0ae-4dcb-8809-4c8f2ad4012c",
+			"name": "Post Author info with missing fields",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Authors",
+			"time": 281,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 200": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				281
+			],
+			"allTests": [
+				{
+					"Status code is 200": false
+				}
+			]
+		},
+		{
+			"id": "c458af55-69d9-4b2b-b48b-c01d92a27077",
+			"name": "Post Author info with invalid idbook",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Authors",
+			"time": 252,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				252
+			],
+			"allTests": [
+				{
+					"Status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "db96b6aa-6a33-4d73-92d5-d41aedd37d3f",
+			"name": "Post Author info without data",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Authors",
+			"time": 138,
+			"responseCode": {
+				"code": 415,
+				"name": "Unsupported Media Type"
+			},
+			"tests": {
+				"Status code is 415": true
+			},
+			"testPassFailCounts": {
+				"Status code is 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				138
+			],
+			"allTests": [
+				{
+					"Status code is 415": true
+				}
+			]
+		},
+		{
+			"id": "ee691189-4a5f-4907-99d8-36de37f84c3f",
+			"name": "Get from Book id author info",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Authors/authors/books/1",
+			"time": 324,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				324
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "870e9039-736d-4feb-9c34-e0e78c34c58c",
+			"name": "Put Author info",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Authors/1",
+			"time": 125,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				125
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "04869b04-41a6-4d3d-8fee-8166b81f6cc6",
+			"name": "Put Author info with invalid data type",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Authors/1",
+			"time": 218,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 200": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				218
+			],
+			"allTests": [
+				{
+					"Status code is 200": false
+				}
+			]
+		},
+		{
+			"id": "cb616ef1-ed08-4091-ae11-e91cbc47e07e",
+			"name": "Put Author info without data",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Authors/1",
+			"time": 108,
+			"responseCode": {
+				"code": 415,
+				"name": "Unsupported Media Type"
+			},
+			"tests": {
+				"Status code is 415": true
+			},
+			"testPassFailCounts": {
+				"Status code is 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				108
+			],
+			"allTests": [
+				{
+					"Status code is 415": true
+				}
+			]
+		},
+		{
+			"id": "dc818992-07f0-49d1-b0f3-088c97d30ee2",
+			"name": "Delete Author with id",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Authors/1",
+			"time": 109,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				109
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "2f7572cd-d143-45ad-9fcb-33efcf0a9153",
+			"name": "Delete Author with invalid id(char)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Authors/abc",
+			"time": 113,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				113
+			],
+			"allTests": [
+				{
+					"Status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "615c248c-3842-4ee9-bbc8-9596c813de91",
+			"name": "Delete Author with invalid id(non existant)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Authors/9999",
+			"time": 101,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				101
+			],
+			"allTests": [
+				{
+					"Status code is 400": false
+				}
+			]
+		},
+		{
+			"id": "76fca77f-4799-4e4c-a1f6-ae7d7f930b91",
+			"name": "Fetch All Books",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Books",
+			"time": 189,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				189
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "4241d9e5-3537-45d4-9025-9c2c20ef8951",
+			"name": "Fetch a book by ID",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Books/1",
+			"time": 121,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				121
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "7f4ee32e-2ddb-4530-a07b-1db0dc49faf0",
+			"name": "Fetch a Book by Invalid ID",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Books/abc",
+			"time": 127,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				127
+			],
+			"allTests": [
+				{
+					"Status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "f0950e6f-5799-4eed-9f1e-2d93b373a4cc",
+			"name": "Create a New Book",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Books",
+			"time": 121,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				121
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "5245ff6f-4ff2-4bf3-81aa-e5939d92a8e8",
+			"name": "Create a Book with Missing  Fields",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Books",
+			"time": 118,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				118
+			],
+			"allTests": [
+				{
+					"Status code is 400": false
+				}
+			]
+		},
+		{
+			"id": "0e33eae1-cfac-4e24-bd7f-6cf831cc9a1f",
+			"name": "Create a Book with  Invalid Date",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Books",
+			"time": 123,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				123
+			],
+			"allTests": [
+				{
+					"Status code is 400": false
+				}
+			]
+		},
+		{
+			"id": "b5076fe5-8ffe-462b-97ff-d43ef433f17b",
+			"name": "Create a Book with  Unauthorized User",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Books",
+			"time": 107,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 403": false
+			},
+			"testPassFailCounts": {
+				"Status code is 403": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				107
+			],
+			"allTests": [
+				{
+					"Status code is 403": false
+				}
+			]
+		},
+		{
+			"id": "0f310f4c-d660-4b2f-9992-a25e147cd3ff",
+			"name": "Update a Book By Valid ID",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Books/1",
+			"time": 113,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				113
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "35d4751f-d310-4e23-8104-577b02a51602",
+			"name": "Update a Book with  Empty Payload",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Books/1",
+			"time": 148,
+			"responseCode": {
+				"code": 415,
+				"name": "Unsupported Media Type"
+			},
+			"tests": {
+				"Status code is 415": true
+			},
+			"testPassFailCounts": {
+				"Status code is 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				148
+			],
+			"allTests": [
+				{
+					"Status code is 415": true
+				}
+			]
+		},
+		{
+			"id": "665bbe98-3ced-45ac-bd11-1f29f731cefe",
+			"name": "Update a Book with  Invalid Data (Invalid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Books/1",
+			"time": 152,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				152
+			],
+			"allTests": [
+				{
+					"Status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "faf2c38e-93ca-4aa8-9d75-20d9dbe04a4b",
+			"name": "Delete a Book by Valid ID",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Books/1",
+			"time": 251,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				251
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "649d7ee8-a4f0-4e24-ad07-0f49ee93a368",
+			"name": "Delete a Book with Invalid ID",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Books/9999",
+			"time": 128,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 404": false
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				128
+			],
+			"allTests": [
+				{
+					"Status code is 404": false
+				}
+			]
+		},
+		{
+			"id": "8a5e8cd6-e489-42e2-980a-fd82ffbaa676",
+			"name": "Fetch All Cover Photos (Valid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos",
+			"time": 133,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				133
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ee736eb3-ba5c-4c0f-86ef-cb36624d55b6",
+			"name": "Fetch a Cover Photo by Valid ID (Valid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1",
+			"time": 151,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				151
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "7380b0cf-1359-480e-89bb-3d2288326da1",
+			"name": "Fetch a Cover Photo by Invalid ID (Invalid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1",
+			"time": 138,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				138
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "c88aac33-bf0f-42d8-9601-80009c1cb092",
+			"name": "Create a New Cover Photo (Valid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos",
+			"time": 158,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				158
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "62107c03-3b2c-4b30-a3cc-1d2278cb8319",
+			"name": "Create a Cover Photo with Missing Fields (Invalid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos",
+			"time": 146,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				146
+			],
+			"allTests": [
+				{
+					"Status code is 400": false
+				}
+			]
+		},
+		{
+			"id": "7c475e2d-5c9d-4516-a1a2-c85c752fbd65",
+			"name": "Create a Cover Photo with Invalid URL (Invalid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos",
+			"time": 139,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				139
+			],
+			"allTests": [
+				{
+					"Status code is 400": false
+				}
+			]
+		},
+		{
+			"id": "1a9e6a59-e20a-4ef0-b5ec-dde316e53a34",
+			"name": "Update a Cover Photo by Valid ID (Valid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1",
+			"time": 169,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				169
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "01e2cdc2-0034-495c-8174-5b9862f6bc56",
+			"name": "Update a Cover Photo with Empty Payload (Invalid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1",
+			"time": 230,
+			"responseCode": {
+				"code": 415,
+				"name": "Unsupported Media Type"
+			},
+			"tests": {
+				"Status code is 415": true
+			},
+			"testPassFailCounts": {
+				"Status code is 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				230
+			],
+			"allTests": [
+				{
+					"Status code is 415": true
+				}
+			]
+		},
+		{
+			"id": "a4162128-a9b5-4600-baef-294e2ca172c3",
+			"name": "Update a Cover Photo with Invalid Data (Invalid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1",
+			"time": 271,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				271
+			],
+			"allTests": [
+				{
+					"Status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "7e089817-1f70-457b-8b46-f86aeff74326",
+			"name": "Delete a Cover Photo by Valid ID (Valid)Delete a Cover Photo by Valid ID (Valid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1",
+			"time": 140,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				140
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "19cde369-a952-48db-a953-2fa5d675c157",
+			"name": "Delete a Cover Photo with Invalid ID (Invalid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/9999",
+			"time": 260,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 404": false
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				260
+			],
+			"allTests": [
+				{
+					"Status code is 404": false
+				}
+			]
+		},
+		{
+			"id": "1eb1ddc6-4554-4349-b47f-13f52d7dd7fd",
+			"name": "Fetch All Users (Valid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Users",
+			"time": 120,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				120
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "5d51b2c5-d6b1-4264-a6d9-68e43f1ba152",
+			"name": "Fetch a User by Valid ID (Valid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Users/1",
+			"time": 316,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				316
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "78a04b01-340d-4328-ac89-887c32ac009f",
+			"name": "Fetch a User by Invalid ID (Invalid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Users/abc",
+			"time": 153,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				153
+			],
+			"allTests": [
+				{
+					"Status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "7f4d9aad-a714-4e6a-963d-3dd4fdfbd173",
+			"name": "Create a New User (Valid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Users",
+			"time": 239,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				239
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "9c161bdb-79a4-4518-b128-70e73e5b5e80",
+			"name": "Create a User with Missing Fields (Invalid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Users",
+			"time": 110,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				110
+			],
+			"allTests": [
+				{
+					"Status code is 400": false
+				}
+			]
+		},
+		{
+			"id": "f6a31911-f8be-4c78-a9a9-e97c5591d187",
+			"name": "Create a User with Invalid Email (Invalid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Users",
+			"time": 111,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				111
+			],
+			"allTests": [
+				{
+					"Status code is 400": false
+				}
+			]
+		},
+		{
+			"id": "04d41ff1-1a3a-45a4-8f54-803eb2e81a3a",
+			"name": "Update a User by Valid ID (Valid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Users/1",
+			"time": 116,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				116
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "de196365-1a72-4201-a811-e0a0ddcac14c",
+			"name": "Update a User with Empty Payload (Invalid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Users/1",
+			"time": 105,
+			"responseCode": {
+				"code": 415,
+				"name": "Unsupported Media Type"
+			},
+			"tests": {
+				"Status code is 415": true
+			},
+			"testPassFailCounts": {
+				"Status code is 415": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				105
+			],
+			"allTests": [
+				{
+					"Status code is 415": true
+				}
+			]
+		},
+		{
+			"id": "cee65fdc-5a68-4255-b829-3af6bed5295a",
+			"name": "Update a User with Invalid Data (Invalid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Users/1",
+			"time": 137,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				137
+			],
+			"allTests": [
+				{
+					"Status code is 400": false
+				}
+			]
+		},
+		{
+			"id": "c8e33413-c5ef-4a74-a13f-fc45002ba138",
+			"name": "Delete a User by Valid ID (Valid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Users/1",
+			"time": 121,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				121
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "d1227606-649b-4c57-a55d-a1c137e260b4",
+			"name": "Delete a User with Invalid ID (Invalid)",
+			"url": "https://fakerestapi.azurewebsites.net/api/v1/Users/9999",
+			"time": 121,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 404": false
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				121
+			],
+			"allTests": [
+				{
+					"Status code is 404": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 11254,
+	"collection": {
+		"requests": [
+			{
+				"id": "bcef86bc-4248-45ee-a1e5-78322eb2539e",
+				"method": "GET"
+			},
+			{
+				"id": "519c0c23-5720-4019-9956-0ecfa51d804f",
+				"method": "GET"
+			},
+			{
+				"id": "a131ebd3-69c4-40b5-8368-3e4e2f09a574",
+				"method": "GET"
+			},
+			{
+				"id": "a657fc77-433c-494a-8a6b-71c8120a59bf",
+				"method": "POST"
+			},
+			{
+				"id": "a9c8b1bd-39a2-49b2-a5e7-c6f81e201cd8",
+				"method": "POST"
+			},
+			{
+				"id": "27d35b5d-97bf-454a-b7a7-32c43684bf4f",
+				"method": "POST"
+			},
+			{
+				"id": "d25f6f49-554d-4915-889a-6b66a4dc600a",
+				"method": "POST"
+			},
+			{
+				"id": "b5befa00-064e-4d0c-9051-6da98937d806",
+				"method": "GET"
+			},
+			{
+				"id": "4caff4af-3e41-464e-b25c-caa127921105",
+				"method": "GET"
+			},
+			{
+				"id": "22142778-62c7-4cc2-aaae-ffdf4c0ee6fb",
+				"method": "DELETE"
+			},
+			{
+				"id": "4514230f-f623-4ebb-86a3-1a5eb8a31de8",
+				"method": "DELETE"
+			},
+			{
+				"id": "61bd3568-c36c-4b1c-9927-34bf2a13f021",
+				"method": "PUT"
+			},
+			{
+				"id": "e325db6a-2e3a-4461-a0eb-dd26163c5593",
+				"method": "PUT"
+			},
+			{
+				"id": "9cfba833-c135-4b23-895c-b6a643f92556",
+				"method": "GET"
+			},
+			{
+				"id": "880788f8-d226-49fe-a45f-d9bf098cf59a",
+				"method": "GET"
+			},
+			{
+				"id": "c9779626-80c5-466d-abb0-05ddcae51357",
+				"method": "GET"
+			},
+			{
+				"id": "23e8758e-48fb-47f4-9774-a169a87b0366",
+				"method": "GET"
+			},
+			{
+				"id": "3b993ffb-4790-4ce6-90e3-b264192037cb",
+				"method": "POST"
+			},
+			{
+				"id": "b45da636-a0ae-4dcb-8809-4c8f2ad4012c",
+				"method": "POST"
+			},
+			{
+				"id": "c458af55-69d9-4b2b-b48b-c01d92a27077",
+				"method": "POST"
+			},
+			{
+				"id": "db96b6aa-6a33-4d73-92d5-d41aedd37d3f",
+				"method": "POST"
+			},
+			{
+				"id": "ee691189-4a5f-4907-99d8-36de37f84c3f",
+				"method": "GET"
+			},
+			{
+				"id": "870e9039-736d-4feb-9c34-e0e78c34c58c",
+				"method": "PUT"
+			},
+			{
+				"id": "04869b04-41a6-4d3d-8fee-8166b81f6cc6",
+				"method": "PUT"
+			},
+			{
+				"id": "cb616ef1-ed08-4091-ae11-e91cbc47e07e",
+				"method": "PUT"
+			},
+			{
+				"id": "dc818992-07f0-49d1-b0f3-088c97d30ee2",
+				"method": "DELETE"
+			},
+			{
+				"id": "2f7572cd-d143-45ad-9fcb-33efcf0a9153",
+				"method": "DELETE"
+			},
+			{
+				"id": "615c248c-3842-4ee9-bbc8-9596c813de91",
+				"method": "DELETE"
+			},
+			{
+				"id": "76fca77f-4799-4e4c-a1f6-ae7d7f930b91",
+				"method": "GET"
+			},
+			{
+				"id": "4241d9e5-3537-45d4-9025-9c2c20ef8951",
+				"method": "GET"
+			},
+			{
+				"id": "7f4ee32e-2ddb-4530-a07b-1db0dc49faf0",
+				"method": "GET"
+			},
+			{
+				"id": "f0950e6f-5799-4eed-9f1e-2d93b373a4cc",
+				"method": "POST"
+			},
+			{
+				"id": "5245ff6f-4ff2-4bf3-81aa-e5939d92a8e8",
+				"method": "POST"
+			},
+			{
+				"id": "0e33eae1-cfac-4e24-bd7f-6cf831cc9a1f",
+				"method": "POST"
+			},
+			{
+				"id": "b5076fe5-8ffe-462b-97ff-d43ef433f17b",
+				"method": "POST"
+			},
+			{
+				"id": "0f310f4c-d660-4b2f-9992-a25e147cd3ff",
+				"method": "PUT"
+			},
+			{
+				"id": "35d4751f-d310-4e23-8104-577b02a51602",
+				"method": "PUT"
+			},
+			{
+				"id": "665bbe98-3ced-45ac-bd11-1f29f731cefe",
+				"method": "PUT"
+			},
+			{
+				"id": "faf2c38e-93ca-4aa8-9d75-20d9dbe04a4b",
+				"method": "DELETE"
+			},
+			{
+				"id": "649d7ee8-a4f0-4e24-ad07-0f49ee93a368",
+				"method": "DELETE"
+			},
+			{
+				"id": "8a5e8cd6-e489-42e2-980a-fd82ffbaa676",
+				"method": "GET"
+			},
+			{
+				"id": "ee736eb3-ba5c-4c0f-86ef-cb36624d55b6",
+				"method": "GET"
+			},
+			{
+				"id": "7380b0cf-1359-480e-89bb-3d2288326da1",
+				"method": "GET"
+			},
+			{
+				"id": "c88aac33-bf0f-42d8-9601-80009c1cb092",
+				"method": "POST"
+			},
+			{
+				"id": "62107c03-3b2c-4b30-a3cc-1d2278cb8319",
+				"method": "POST"
+			},
+			{
+				"id": "7c475e2d-5c9d-4516-a1a2-c85c752fbd65",
+				"method": "POST"
+			},
+			{
+				"id": "1a9e6a59-e20a-4ef0-b5ec-dde316e53a34",
+				"method": "PUT"
+			},
+			{
+				"id": "01e2cdc2-0034-495c-8174-5b9862f6bc56",
+				"method": "PUT"
+			},
+			{
+				"id": "a4162128-a9b5-4600-baef-294e2ca172c3",
+				"method": "PUT"
+			},
+			{
+				"id": "7e089817-1f70-457b-8b46-f86aeff74326",
+				"method": "DELETE"
+			},
+			{
+				"id": "19cde369-a952-48db-a953-2fa5d675c157",
+				"method": "DELETE"
+			},
+			{
+				"id": "1eb1ddc6-4554-4349-b47f-13f52d7dd7fd",
+				"method": "GET"
+			},
+			{
+				"id": "5d51b2c5-d6b1-4264-a6d9-68e43f1ba152",
+				"method": "GET"
+			},
+			{
+				"id": "78a04b01-340d-4328-ac89-887c32ac009f",
+				"method": "GET"
+			},
+			{
+				"id": "7f4d9aad-a714-4e6a-963d-3dd4fdfbd173",
+				"method": "POST"
+			},
+			{
+				"id": "9c161bdb-79a4-4518-b128-70e73e5b5e80",
+				"method": "POST"
+			},
+			{
+				"id": "f6a31911-f8be-4c78-a9a9-e97c5591d187",
+				"method": "POST"
+			},
+			{
+				"id": "04d41ff1-1a3a-45a4-8f54-803eb2e81a3a",
+				"method": "PUT"
+			},
+			{
+				"id": "de196365-1a72-4201-a811-e0a0ddcac14c",
+				"method": "PUT"
+			},
+			{
+				"id": "cee65fdc-5a68-4255-b829-3af6bed5295a",
+				"method": "PUT"
+			},
+			{
+				"id": "c8e33413-c5ef-4a74-a13f-fc45002ba138",
+				"method": "DELETE"
+			},
+			{
+				"id": "d1227606-649b-4c57-a55d-a1c137e260b4",
+				"method": "DELETE"
+			}
+		]
+	}
+}
