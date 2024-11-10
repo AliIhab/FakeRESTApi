@@ -1,7 +1,8 @@
 
-# FakeRESTApi API Test Automation
+# FakeRESTApi API Test Automation Project
 
 This repository contains automated tests for the [FakeRESTApi](https://fakerestapi.azurewebsites.net/index.html) API using **Rest Assured** and **Postman**. The tests cover all available API requests, including both functional test cases and bug reports to ensure a comprehensive validation of the API’s functionality.
+This is a Project that is submitted to ITI (Information Technology Institure) Track Software Testing 4 months
 
 ## Table of Contents
 - [Project Overview](#project-overview)
